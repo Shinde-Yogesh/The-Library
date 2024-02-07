@@ -24,14 +24,14 @@ public class Librarian_Controller {
 	@Autowired
 	private Librarian_service service;
 	
-	
-
+       // For the get all users
 	@GetMapping("All_users")
 	public List<Users_In_library> get_users() {
 		System.out.println("In the all users..");
 		return service.get_users();
 	}
-
+        
+	//create new user
 	@PostMapping("Insert_User")
 	public String create_User(@RequestBody Users_In_library user) {
 		return service.create_User(user);
